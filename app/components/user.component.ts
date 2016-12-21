@@ -38,7 +38,12 @@ export class UserComponent  {
 
   toggleHobbies() {
     //console.log('show');
-    this.showHobbies = true;
+    if (this.showHobbies === true) {
+      this.showHobbies = false;
+    } else {
+      this.showHobbies = true;
+    }
+
   }
 }
 
