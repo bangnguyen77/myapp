@@ -9,12 +9,23 @@ import { Component } from '@angular/core';
   `,
 })
 export class UserComponent  {
-  name = 'John Doe';
-  email = 'john@gmail.com';
-  address = {
-    street: '12 Main St',
-    city: 'Boston',
-    state: 'MA'
-  }
+  name: string;
+  email: string;
+  address: address;
 
+  constructor() {
+    this.name = 'John Doe';
+    this.email = 'john@gmail.com';
+    this.address = {
+      street: '12 Main St',
+      city: 'Boston',
+      state: 'MA'
+    }
+  }
+}
+
+interface address {
+  street: string;
+  city: string;
+  state: string;
 }
